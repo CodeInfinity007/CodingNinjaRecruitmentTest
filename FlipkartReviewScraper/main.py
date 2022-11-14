@@ -2,7 +2,7 @@ import csv
 from bs4 import BeautifulSoup
 import requests
 
-def_webpage = "https://www.flipkart.com/redmi-note-10-pro-dark-nebula-128-gb/product-reviews/itm4cfcbeb29b31c?pid=MOBGB725FTZ3HMNF&lid=LSTMOBGB725FTZ3HMNF9INGUW&marketplace=FLIPKART&q=redmi+note+10+pro&store=tyy%2F4io&srno=s_1_8&otracker=search&otracker1=search&fm=Search&iid=ddf4996d-8812-4c5c-aaa7-6934dc74deb5.MOBGB725FTZ3HMNF.SEARCH&ppt=sp&ppn=sp&ssid=myyisogmqo0000001668210331726&qH=20ef7d326dcad8f3&"
+#def_webpage = "https://www.flipkart.com/redmi-note-10-pro-dark-nebula-128-gb/product-reviews/itm4cfcbeb29b31c?pid=MOBGB725FTZ3HMNF&lid=LSTMOBGB725FTZ3HMNF9INGUW&marketplace=FLIPKART&q=redmi+note+10+pro&store=tyy%2F4io&srno=s_1_8&otracker=search&otracker1=search&fm=Search&iid=ddf4996d-8812-4c5c-aaa7-6934dc74deb5.MOBGB725FTZ3HMNF.SEARCH&ppt=sp&ppn=sp&ssid=myyisogmqo0000001668210331726&qH=20ef7d326dcad8f3&"
 
 
 def mainfn(webpage, num_revs):
@@ -68,13 +68,15 @@ def mainfn(webpage, num_revs):
         soup = BeautifulSoup(source_text, 'lxml')
         get()
     else:
-        for i in range(1, page_num + 1):
+        for i in range(1, page_num + 1):    
             page = webpage + f"&page={i}"
             source_text = requests.get(page).text
             soup = BeautifulSoup(source_text, 'lxml')
             get()
 
 
-# Run program if run indivisually with default settings (for testing only)
+# Runs without ui with command line interface
 if __name__ == "__main__":
-    mainfn(def_webpage, 10)
+    ent_webpage = input("Enter flipkart product link: ").replace("/p/", "/product-reviews/")
+    ent_num_revs = input("Enter number of reviews to fetch(multiple of 10 is preffered): ")
+    mainfn(ent_webpage, ent_num_revs)
