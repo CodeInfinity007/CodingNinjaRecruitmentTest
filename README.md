@@ -14,3 +14,7 @@ How to use:
 
 ![image](https://user-images.githubusercontent.com/78736570/201707121-50863865-097c-43a9-8800-2e40b936c772.png)
 
+
+# Image Resizer
+
+This application uses open-cv to resize the image using the resize method.
