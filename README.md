@@ -11,3 +11,6 @@ How to use:
 5. If number of reviews to fetch is not a multiple of 10 then the value is flored and that many number of reviews are fetched.
 
 ![image](https://user-images.githubusercontent.com/78736570/201704931-419e0037-208d-49c4-956c-7e3e0bb0bc05.png)
+
+![image](https://user-images.githubusercontent.com/78736570/201707121-50863865-097c-43a9-8800-2e40b936c772.png)
+
