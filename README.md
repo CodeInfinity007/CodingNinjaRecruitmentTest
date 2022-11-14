@@ -15,6 +15,20 @@ How to use:
 ![image](https://user-images.githubusercontent.com/78736570/201707121-50863865-097c-43a9-8800-2e40b936c772.png)
 
 
-# Image Resizer
+# ImageResizer
 
 This application uses open-cv to resize the image using the resize method.
+This is only command line interface program.
+Shows the final result and saves the resized file in root directry as 'resized_imaged.jpg'.
+
+How to use:
+1. Start "main.py"
+2. Enter name of file you want to resize with its extension.
+3. Enter Height and Width of the resized image you want to get.
+4. Then the resized image will be saved in root directory and instantly results will be displayed while showing comparison between original and resized image.
+
+# CLI
+![image](https://user-images.githubusercontent.com/78736570/201713534-570c0ab2-41f5-4dd8-9212-df38f48b7d8e.png)
+
+# Result
+![image](https://user-images.githubusercontent.com/78736570/201713781-612ef70a-a6bb-4edf-9c53-75901e874a27.png)
